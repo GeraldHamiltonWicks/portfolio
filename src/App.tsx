@@ -16,15 +16,14 @@ export const App = (): ReactElement => {
         setIsToApplyBlur(!isToApplyBlur);
     }
 
-    type Page = 'home' | 'projects' | 'skills' | 'contact';
-    const setPage = (page: Page): void => {
+    const setPage = (page: 'home' | 'projects' | 'skills' | 'contact'): void => {
       setCurrentPage(page);
     }
 
     return (
         <>
             <Sidenav toggleBlur={toggleBlur} setPage={setPage} currentPage={currentPage} />
-            { currentPage === 'home' && <HomePage isToApplyBlur={isToApplyBlur} /> }
+            { currentPage === 'home' && <HomePage isToApplyBlur={isToApplyBlur} setPage={setPage} /> }
             { currentPage === 'projects' && <ProjectsPage isToApplyBlur={isToApplyBlur} /> }
             { currentPage === 'skills' && <SkillsPage isToApplyBlur={isToApplyBlur} /> }
             { currentPage === 'contact' && <ContactPage isToApplyBlur={isToApplyBlur} /> }

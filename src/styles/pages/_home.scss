@@ -66,13 +66,25 @@
         }
 
         a {
-            border: 0;
-            background-color: transparent;
-            color: rgba(94, 114, 228, 1);
-            cursor: pointer;
-            @include setFont('Open Sans', 400, 16px);
-            line-height: 21.79px;
+            margin-top: 20px;
             text-decoration: none;
+            border: 1px solid $primary-green-100;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 10px 30px;
+            color: $primary-green-100;
+            @include setFont('Inter', 700, 10px);
+            text-transform: uppercase;
+
+            &:hover {
+                transition: 0.3s;
+                background-color: $primary-green-100;
+                color: white;
+            }
+
+            &:not(:hover) {
+                transition: 0.3s;
+            }
         }
     }
 

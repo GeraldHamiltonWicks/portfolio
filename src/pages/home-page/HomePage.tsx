@@ -2,7 +2,8 @@ import { ReactElement } from "react";
 import ProfileImage from '../../assets/images/profile.png';
 
 interface HomeProps {
-    isToApplyBlur: boolean
+    isToApplyBlur: boolean,
+    setPage: (page: 'home' | 'projects' | 'skills' | 'contact') => void
 }
 
 export const HomePage = (props: HomeProps): ReactElement => {
@@ -16,7 +17,7 @@ export const HomePage = (props: HomeProps): ReactElement => {
                 <h3>Web Developer</h3>
                 <hr/>
                 <p>As a web developer, I specialize in JavaScript applications, having experience with Angular, NgRx, RxJS, Cypress e2e tests, React, Redux, Router, Typescript, NodeJS, agile scrum, and clean code.</p>
-                <a href="/projects">Show more</a>            
+                <a onClick={() => props.setPage('projects')}>Show more</a>            
             </div>
         </div>
     );

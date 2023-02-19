@@ -12,6 +12,11 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
     // isToShowSidenav is only for small screens
     const [isToShowSideNav, setIsToShowSidenav] = useState(false);
 
+    const onLinkClick = (page: 'home' | 'projects' | 'skills' | 'contact'): void => {
+        props.setPage(page);
+        toggleSidenav();
+    }
+
     const toggleSidenav = (): void => { 
         setIsToShowSidenav(!isToShowSideNav);
         props.toggleBlur();
@@ -38,19 +43,19 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
                 <h4>Portfolio | Gerald Wicks</h4>
             </div>
             <hr/>
-            <a onClick={() => props.setPage('home')} className={`link-container ${getLinkClass('home')}`}>
+            <a onClick={() => onLinkClick('home')} className={`link-container ${getLinkClass('home')}`}>
                 <Icon iconSelector="home" />
                 <h5>Home</h5>
             </a>
-            <a onClick={() => props.setPage('projects')} className={`link-container ${getLinkClass('projects')}`}>
+            <a onClick={() => onLinkClick('projects')} className={`link-container ${getLinkClass('projects')}`}>
                 <Icon iconSelector="projects" />
                 <h5>Projects</h5>
             </a>
-            <a onClick={() => props.setPage('skills')} className={`link-container ${getLinkClass('skills')}`}>
+            <a onClick={() => onLinkClick('skills')} className={`link-container ${getLinkClass('skills')}`}>
                <Icon iconSelector="skills" />
                <h5>Skills</h5>
             </a>
-            <a onClick={() => props.setPage('contact')} className={`link-container ${getLinkClass('contact')}`}>
+            <a onClick={() => onLinkClick('contact')} className={`link-container ${getLinkClass('contact')}`}>
                 <Icon iconSelector="contact" />
                 <h5>Contact</h5>
             </a>
@@ -58,7 +63,7 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
                 <Icon iconSelector="message" />
                 <h6>Have any questions ?</h6>
                 <p>Please check our contact page</p>
-                <button onClick={() => props.setPage('contact')}>message</button>
+                <button onClick={() => onLinkClick('contact')}>message</button>
             </div>
             </div>
         </div>
