@@ -160,9 +160,9 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                         </div>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card card-portfolio">
                     <div className="image-container">
-                        <a href="/projects" rel="noreferrer">
+                        <a rel="noreferrer">
                         <img src={PortfolioImage} alt="portfolio" />
                         </a>
                     </div>
@@ -172,9 +172,6 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                     <h3>The current portfolio was made with react and also have connection with a node backend.</h3>
                     <div className="bottom-container">
                         {/* TODO: create a helper to navigate to some page */}
-                        <a href="/projects" rel="noreferrer">
-                            View
-                        </a>
                         <div className="icons">
                             <Tooltip text="Node">
                                 <Icon iconSelector="node" />

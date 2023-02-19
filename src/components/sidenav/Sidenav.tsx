@@ -1,10 +1,11 @@
 import { ReactElement, useState } from "react";
 import { Icon } from "../icons/Icon";
 import LogoImage from '../../assets/images/logo.png';
-import { navigateTo } from "../../helpers";
 
 interface SidenavProps {
-    toggleBlur: () => void
+    toggleBlur: () => void,
+    setPage: (page: 'home' | 'projects' | 'skills' | 'contact') => void,
+    currentPage: string
 }
 
 export const Sidenav = (props: SidenavProps): ReactElement => {
@@ -17,7 +18,7 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
     }
     
     const getLinkClass = (currentLink: string): string => {
-        const pathname = window.location.pathname;
+        const pathname = props.currentPage;
         const isCurrentLinkActive = currentLink === pathname;
         
         return isCurrentLinkActive ? 'link-container-active' : '';
@@ -37,19 +38,19 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
                 <h4>Portfolio | Gerald Wicks</h4>
             </div>
             <hr/>
-            <a href="/" className={`link-container ${getLinkClass('/')}`}>
+            <a onClick={() => props.setPage('home')} className={`link-container ${getLinkClass('home')}`}>
                 <Icon iconSelector="home" />
                 <h5>Home</h5>
             </a>
-            <a href="/projects" className={`link-container ${getLinkClass('/projects')}`}>
+            <a onClick={() => props.setPage('projects')} className={`link-container ${getLinkClass('projects')}`}>
                 <Icon iconSelector="projects" />
                 <h5>Projects</h5>
             </a>
-            <a href="/skills" className={`link-container ${getLinkClass('/skills')}`}>
+            <a onClick={() => props.setPage('skills')} className={`link-container ${getLinkClass('skills')}`}>
                <Icon iconSelector="skills" />
                <h5>Skills</h5>
             </a>
-            <a href="/contact" className={`link-container ${getLinkClass('/contact')}`}>
+            <a onClick={() => props.setPage('contact')} className={`link-container ${getLinkClass('contact')}`}>
                 <Icon iconSelector="contact" />
                 <h5>Contact</h5>
             </a>
@@ -57,7 +58,7 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
                 <Icon iconSelector="message" />
                 <h6>Have any questions ?</h6>
                 <p>Please check our contact page</p>
-                <button onClick={() => navigateTo('/contact#card-message')}>message</button>
+                <button onClick={() => props.setPage('contact')}>message</button>
             </div>
             </div>
         </div>

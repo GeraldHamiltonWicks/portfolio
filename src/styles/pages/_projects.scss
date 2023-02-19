@@ -148,6 +148,17 @@
                 }
             }
         }
+
+        .card-portfolio {
+            .image-container {
+                cursor: default;
+            }
+
+            .bottom-container {
+                display: flex;
+                justify-content: end;
+            }
+        }
     }
 
     @media only screen and (max-width: 860px) {

@@ -10,20 +10,24 @@ import './styles/main.scss';
 
 export const App = (): ReactElement => {
     const [isToApplyBlur, setIsToApplyBlur] = useState(false);
+    const [currentPage, setCurrentPage] = useState('home');
 
     const toggleBlur = (): void => {
         setIsToApplyBlur(!isToApplyBlur);
     }
 
+    type Page = 'home' | 'projects' | 'skills' | 'contact';
+    const setPage = (page: Page): void => {
+      setCurrentPage(page);
+    }
+
     return (
         <>
-            <Sidenav toggleBlur={toggleBlur} />
-            <Routes>
-              <Route path="/" element={<HomePage isToApplyBlur={isToApplyBlur} />}></Route>
-              <Route path="/projects" element={<ProjectsPage isToApplyBlur={isToApplyBlur} />}></Route>
-              <Route path="/skills" element={<SkillsPage isToApplyBlur={isToApplyBlur} />}></Route>
-              <Route path="/contact" element={<ContactPage isToApplyBlur={isToApplyBlur} />}></Route>
-            </Routes>
+            <Sidenav toggleBlur={toggleBlur} setPage={setPage} currentPage={currentPage} />
+            { currentPage === 'home' && <HomePage isToApplyBlur={isToApplyBlur} /> }
+            { currentPage === 'projects' && <ProjectsPage isToApplyBlur={isToApplyBlur} /> }
+            { currentPage === 'skills' && <SkillsPage isToApplyBlur={isToApplyBlur} /> }
+            { currentPage === 'contact' && <ContactPage isToApplyBlur={isToApplyBlur} /> }
         </>
     );
 }
