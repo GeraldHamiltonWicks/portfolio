@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.23677704.css",
-    "main.js": "/static/js/main.f5a72a0b.js",
-    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
-    "static/media/bahiacruise.png": "/static/media/bahiacruise.941f645fa65291837f3b.png",
-    "static/media/profile.png": "/static/media/profile.3c9da0b361de65eb6c89.png",
-    "static/media/tindog.png": "/static/media/tindog.79eba79e99c256a67ebc.png",
-    "static/media/portfolio.png": "/static/media/portfolio.e18bb6e1c7050549a16c.png",
-    "static/media/ecommerce.png": "/static/media/ecommerce.7e7abbd14f61054f679c.png",
-    "static/media/breadcrumb.png": "/static/media/breadcrumb.fb1440b5d0c4227f5bd2.png",
-    "static/media/login-system.png": "/static/media/login-system.f638f152ba789343120d.png",
-    "static/media/keeper.png": "/static/media/keeper.74a1ee4129b66e723a12.png",
-    "static/media/logo.png": "/static/media/logo.78d48ddd0193984b9c1d.png",
-    "index.html": "/index.html",
-    "main.23677704.css.map": "/static/css/main.23677704.css.map",
-    "main.f5a72a0b.js.map": "/static/js/main.f5a72a0b.js.map",
-    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/portfolio/static/css/main.86100a96.css",
+    "main.js": "/portfolio/static/js/main.8ce8ea94.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/bahiacruise.png": "/portfolio/static/media/bahiacruise.941f645fa65291837f3b.png",
+    "static/media/profile.png": "/portfolio/static/media/profile.3c9da0b361de65eb6c89.png",
+    "static/media/tindog.png": "/portfolio/static/media/tindog.79eba79e99c256a67ebc.png",
+    "static/media/portfolio.png": "/portfolio/static/media/portfolio.e18bb6e1c7050549a16c.png",
+    "static/media/ecommerce.png": "/portfolio/static/media/ecommerce.7e7abbd14f61054f679c.png",
+    "static/media/breadcrumb.png": "/portfolio/static/media/breadcrumb.fb1440b5d0c4227f5bd2.png",
+    "static/media/login-system.png": "/portfolio/static/media/login-system.f638f152ba789343120d.png",
+    "static/media/keeper.png": "/portfolio/static/media/keeper.74a1ee4129b66e723a12.png",
+    "static/media/logo.png": "/portfolio/static/media/logo.78d48ddd0193984b9c1d.png",
+    "index.html": "/portfolio/index.html",
+    "main.86100a96.css.map": "/portfolio/static/css/main.86100a96.css.map",
+    "main.8ce8ea94.js.map": "/portfolio/static/js/main.8ce8ea94.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23677704.css",
-    "static/js/main.f5a72a0b.js"
+    "static/css/main.86100a96.css",
+    "static/js/main.8ce8ea94.js"
   ]
 }
