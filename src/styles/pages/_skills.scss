@@ -1,0 +1,107 @@
+#skills-page {
+    width: 100%;
+    padding: 15px 15px 0 0;
+
+    .top-container {
+        background-color: $primary-green-100;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/images/breadcrumb.png');
+        background-position: 1%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        min-width: 100%;
+
+        &:hover {
+            transition: 1s;
+            background-position-x: -20px;
+        }
+
+        &:not(:hover) {
+            transition: 1s;
+        }
+
+        .title-container {
+            background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%);
+            border: 1.5px solid #FFFFFF;
+            box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+            /* Note: backdrop-filter has minimal browser support */
+            backdrop-filter: blur(10.5px);
+            border-radius: 15px;
+            height: 100px;
+            width: calc(100% - 48px);
+            position: relative;
+            top: 100px;
+
+            h1 {
+                margin: 30px;
+                color: rgba(45, 44, 72, 1);
+                @include setFont('Inter', 700, 18px);
+                line-height: 25.2px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            min-height: 150px;
+
+            .title-container {
+                top: 80px;
+            }
+        }
+    }
+
+    .card-list {
+        margin-top: 100px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 40px 20px;
+        gap: 20px;
+        
+        .card {
+            background-color: #F8F9FA;
+            border-radius: 12px;
+            padding: 26px 27px;
+            margin-bottom: 24px;
+
+            h1 {
+                margin: 0 0 10px;
+                color: rgba(113, 128, 150, 1);
+                @include setFont('Inter', 700, 14px);
+                line-height: 19.6px;
+            }
+
+            ul {
+                li {
+                    color: rgba(113, 128, 150, 1);
+                    @include setFont('Inter', 400, 12px);
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 860px) {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.page-blur {
+    @media only screen and (max-width: 860px) {
+        animation: linearBlurEffect 0.5s ease-out;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+    }
+}
+
+@keyframes linearBlurEffect {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(6px);
+    }
+}

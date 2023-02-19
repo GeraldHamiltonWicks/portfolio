@@ -1,0 +1,175 @@
+#projects-page {
+    width: 100%;
+    padding: 15px 15px 0 0;
+
+    .top-container {
+        background-color: $primary-green-100;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/images/breadcrumb.png');
+        background-position: 1%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        min-width: 100%;
+
+        &:hover {
+            transition: 1s;
+            background-position-x: -20px;
+        }
+
+        &:not(:hover) {
+            transition: 1s;
+        }
+
+        .title-container {
+            background: linear-gradient(112.83deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 255, 255, 0.8) 110.84%);
+            border: 1.5px solid #FFFFFF;
+            box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+            /* Note: backdrop-filter has minimal browser support */
+            backdrop-filter: blur(10.5px);
+            border-radius: 15px;
+            height: 100px;
+            width: calc(100% - 48px);
+            position: relative;
+            top: 100px;
+
+            h1 {
+                margin: 30px;
+                color: rgba(45, 44, 72, 1);
+                @include setFont('Inter', 700, 18px);
+                line-height: 25.2px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            min-height: 150px;
+
+            .title-container {
+                top: 80px;
+            }
+        }
+    }
+
+    .card-list {
+        margin-top: 100px;
+        background-color: white;
+        border-radius: 15px;
+        padding: 40px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        
+        .card {
+            max-width: 340px;
+            margin-bottom: 20px;
+
+            .image-container {
+                cursor: pointer;
+                box-shadow: 0px 3.5px 5.5px rgba(0, 0, 0, 0.02);
+                border-radius: 15px;
+
+                img {
+                    border-radius: 15px;
+                    height: 170px;
+                    width: 340px;
+                }
+
+                &:hover {
+                    transition: 0.3s;
+                    background: linear-gradient(360deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
+                    transform: translateY(-4px);
+                }
+
+                &:not(:hover) {
+                    transition: 0.3s;
+                }
+            }
+            
+            h4 {
+                margin: 19.5px 0 0;
+                color: rgba(160, 174, 192, 1);
+                @include setFont('Inter', 400, 10px);
+                line-height: 15px;
+            }
+
+            h2 {
+                margin: 0 0 11px;
+                color: rgba(45, 44, 72, 1);
+                @include setFont('Inter', 700, 18px);
+                line-height: 25.2px;
+            }
+
+            h3 {
+                margin: 0 0 20px;
+                color: rgba(160, 174, 192, 1);
+                @include setFont('Inter', 400, 12px);
+                line-height: 18px;
+                max-width: 350.6px;
+            }
+
+            .bottom-container {
+                display: flex;
+
+                a {
+                    text-decoration: none;
+                    border: 1px solid $primary-green-100;
+                    border-radius: 12px;
+                    background-color: transparent;
+                    cursor: pointer;
+                    padding: 10px 30px;
+                    color: $primary-green-100;
+                    @include setFont('Inter', 700, 10px);
+                    text-transform: uppercase;
+
+                    &:hover {
+                        transition: 0.3s;
+                        background-color: $primary-green-100;
+                        color: white;
+                    }
+
+                    &:not(:hover) {
+                        transition: 0.3s;
+                    }
+                }
+
+                .icons {
+                    display: flex;
+                    align-items: center;
+                    justify-content:end;
+                    width: calc(100% - 109.53px);
+
+                    svg {
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 860px) {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+}
+
+.page-blur {
+    @media only screen and (max-width: 860px) {
+        animation: linearBlurEffect 0.5s ease-out;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+    }
+}
+
+@keyframes linearBlurEffect {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(6px);
+    }
+}

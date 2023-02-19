@@ -1,0 +1,105 @@
+#home-page {
+    width: 100%;
+    padding: 15px 15px 0 0;
+    // filter: blur(4px);
+
+    .top-container {
+        background-color: $primary-green-100;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/images/breadcrumb.png');
+        background-position: 1%;
+        border-radius: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            border-radius: 100%;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            top: 100px;
+
+            @media only screen and (max-width: 500px) {
+                height: 150px;
+                width: 150px;
+                top: 75px;
+            }
+        }
+
+        &:hover {
+            transition: 1s;
+            background-position-x: -20px;
+        }
+
+        &:not(:hover) {
+            transition: 1s;
+        }
+    }
+
+    .bottom-container {
+        margin-top: 16.21px + 100px;
+        text-align: center;
+        padding: 0 100px;
+
+        h1 {
+            color: #32325D;
+            @include setFont('Open Sans', 400, 28px);
+            line-height: 38.13px;
+        }
+
+        h3 {
+            color: rgba(50, 50, 93, 1);
+            @include setFont('Open Sans', 400, 16px);
+            line-height: 22px;
+        }
+
+        hr {
+            border-color: rgba(233, 236, 239, 1);;
+        }
+
+        p {
+            color: rgba(82, 95, 127, 1);
+            @include setFont('Open Sans', 300, 16px);
+            line-height: 27px;
+        }
+
+        a {
+            border: 0;
+            background-color: transparent;
+            color: rgba(94, 114, 228, 1);
+            cursor: pointer;
+            @include setFont('Open Sans', 400, 16px);
+            line-height: 21.79px;
+            text-decoration: none;
+        }
+    }
+
+    @media only screen and (max-width: 860px) {
+        padding: 0;
+        margin-bottom: 40px;
+
+        .bottom-container {
+            padding: 0 10px;
+        }
+    }
+}
+
+.page-blur {
+    @media only screen and (max-width: 860px) {
+        animation: linearBlurEffect 0.5s ease-out;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+    }
+}
+
+@keyframes linearBlurEffect {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(6px);
+    }
+}
