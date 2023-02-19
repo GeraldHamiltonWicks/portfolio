@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { sendEmail } from "../../helpers/api";
 import { Loading } from "../../components";
 import "react-toastify/dist/ReactToastify.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface ContactProps {
     isToApplyBlur: boolean
@@ -95,7 +96,7 @@ export const ContactPage = (props: ContactProps): ReactElement => {
                 </div>
                 <div className="card" id="card-profile">
                     <div className="card-top-container">
-                        <img src={ProfileImage} alt="profile" />
+                        <LazyLoadImage src={ProfileImage} alt="profile" />
                         <div className="text-container">
                             <h1>Profile Information</h1>
                             <p>Hi, I’m a web developer specialized in JavaScript applications, having experience with Angular, NgRx, RxJS, Cypress e2e tests, React, Redux, Router, Typescript, NodeJS, agile scrum, and clean code.</p>

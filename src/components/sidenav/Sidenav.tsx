@@ -1,5 +1,6 @@
 import { ReactElement, useState } from "react";
 import { Icon } from "../icons/Icon";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LogoImage from '../../assets/images/logo.png';
 
 interface SidenavProps {
@@ -39,7 +40,7 @@ export const Sidenav = (props: SidenavProps): ReactElement => {
             </div>
             <div className={`sidenav-desktop ${isToShowSideNav ? 'sidenav-visible': ''}`}>
             <div className="header-container">
-                <img src={LogoImage} alt="logo" />
+                <LazyLoadImage src={LogoImage} alt="logo" />
                 <h4>Portfolio | Gerald Wicks</h4>
             </div>
             <hr/>

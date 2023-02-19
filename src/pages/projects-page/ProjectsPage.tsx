@@ -6,6 +6,7 @@ import EcommerceImage from '../../assets/images/ecommerce.png';
 import TindogImage from '../../assets/images/tindog.png';
 import KeeperAppImage from '../../assets/images/keeper.png';
 import PortfolioImage from '../../assets/images/portfolio.png';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface ProjectstProps {
     isToApplyBlur: boolean
@@ -23,7 +24,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                 <div className="card">
                     <div className="image-container">
                         <a href="https://geraldhamiltonwicks.github.io/login-system/" target="_blank" rel="noreferrer">
-                        <img src={LoginSystemImage} alt="project-login-system" />
+                        <LazyLoadImage src={LoginSystemImage} alt="project-login-system" />
                         </a>
                     </div>
                     
@@ -53,7 +54,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                 <div className="card">
                     <div className="image-container">
                         <a href="https://www.bahiacruise.com.br/" target="_blank" rel="noreferrer">
-                        <img src={BahiaCruiseImage} alt="bahia-cruise" />
+                        <LazyLoadImage src={BahiaCruiseImage} alt="bahia-cruise" />
                         </a>
                     </div>
                     
@@ -81,7 +82,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                 <div className="card">
                     <div className="image-container">
                         <a href="https://kyn8b.csb.app/" target="_blank" rel="noreferrer">
-                        <img src={EcommerceImage} alt="e-commerce" />
+                        <LazyLoadImage src={EcommerceImage} alt="e-commerce" />
                         </a>
                     </div>
                     
@@ -110,7 +111,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                 <div className="card">
                     <div className="image-container">
                         <a href="https://geraldhamiltonwicks.github.io/portfolio_web_development/TinDog/index.html" target="_blank" rel="noreferrer">
-                        <img src={TindogImage} alt="tindog" />
+                        <LazyLoadImage src={TindogImage} alt="tindog" />
                         </a>
                     </div>
                     
@@ -135,7 +136,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                 <div className="card">
                     <div className="image-container">
                         <a href="https://4zrnb.csb.app/" target="_blank" rel="noreferrer">
-                        <img src={KeeperAppImage} alt="keeper" />
+                        <LazyLoadImage src={KeeperAppImage} alt="keeper" />
                         </a>
                     </div>
                     
@@ -163,7 +164,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                 <div className="card card-portfolio">
                     <div className="image-container">
                         <a rel="noreferrer">
-                        <img src={PortfolioImage} alt="portfolio" />
+                        <LazyLoadImage src={PortfolioImage} alt="portfolio" />
                         </a>
                     </div>
                     

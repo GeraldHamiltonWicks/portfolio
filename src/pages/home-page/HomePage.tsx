@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import ProfileImage from '../../assets/images/profile.png';
 
 interface HomeProps {
@@ -10,7 +11,7 @@ export const HomePage = (props: HomeProps): ReactElement => {
     return (
         <div id="home-page" className={props.isToApplyBlur ? 'page-blur' : ''}>
             <div className="top-container">
-                <img src={ProfileImage} alt="profile" />
+                <LazyLoadImage src={ProfileImage} alt="profile" />
             </div>
             <div className="bottom-container">
                 <h1>Gerald Wicks</h1>
