@@ -63,6 +63,7 @@
             color: rgba(82, 95, 127, 1);
             @include setFont('Open Sans', 300, 16px);
             line-height: 27px;
+            margin-bottom: 40px;
         }
 
         a {
