@@ -45,8 +45,9 @@ export const ContactPage = (props: ContactProps): ReactElement => {
 
         setIsToShowLoading(true);
         const response = await sendEmail(email, message);
+        console.log('response = ', response);
 
-        if (isNotString(response)) {
+        if (response.status !== 200) {
             setErrorMessage('Sorry, there was an error. Try again later.');
             setIsToShowLoading(false);
             return;

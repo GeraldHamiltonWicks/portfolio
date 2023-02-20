@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 const BACK_END_URI = 'https://email-handler.onrender.com';
 
@@ -10,7 +10,7 @@ export const api = axios.create({
     },
 });
 
-export const sendEmail = async (fromEmail: string, message: string): Promise<void> => {
+export const sendEmail = async (fromEmail: string, message: string): Promise<AxiosResponse<any, any>> => {
     return (await api.post('/sendemail', 
     { 
         email: 'geraldwicks.desktop@gmail.com',
@@ -20,5 +20,5 @@ export const sendEmail = async (fromEmail: string, message: string): Promise<voi
         <h3>${message}</h3>
         `
     }
-    )).data;
+    ));
 }
