@@ -60,7 +60,7 @@ export const ProjectsPage = (props: ProjectstProps): ReactElement => {
                     
                     <h4>Project #2</h4>
                     <h2>Freelancer website</h2>
-                    <h3>TThis freelancer was made for a boat company with the help of CMS and some basics HTML, CSS and JavaScript.</h3>
+                    <h3>This freelancer was made for a boat company with the help of CMS and some basics HTML, CSS and JavaScript.</h3>
                     <div className="bottom-container">
                         {/* TODO: create a helper to navigate to some page */}
                         <a href="https://www.bahiacruise.com.br/" target="_blank" rel="noreferrer">
