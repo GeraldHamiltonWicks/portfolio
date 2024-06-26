@@ -17,7 +17,9 @@ export const HomePage = (props: HomeProps): ReactElement => {
                 <h1>Gerald Wicks</h1>
                 <h3>Web Developer</h3>
                 <hr/>
-                <p>As a web developer, I specialize in JavaScript applications, having experience with Angular, NgRx, RxJS, Cypress e2e tests, React, Redux, Router, Typescript, NodeJS, agile scrum, and clean code.</p>
+                <p>
+                    As Full Stack Engineer with a robust background in React, Next, Node, JavaScript and TypeScript, with a focus on frontend development, I bring <bold>4 years of experience</bold> in crafting scalable web applications. Additionally, I have 2 years of <bold>experience collaborating with global teams</bold>, conducting communication in English. 
+                </p>
                 <a onClick={() => props.setPage('projects')}>Show more</a>            
             </div>
         </div>
